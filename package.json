@@ -1,25 +1,52 @@
 {
-  "name": "react-starter",
+  "name": "congratulating-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "repository": "git@github.com:habdenscrimen/congratulating-app.git",
+  "author": "Viacheslav Yefremov <habdenscrimen@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "start": "npx parcel serve src/index.html",
-    "build": "npx parcel build src/index.html",
-    "format": "npx prettier --write './!(node_modules|dist)/**/*.{ts,tsx,js,jsx}'"
-  },
-  "devDependencies": {
-    "@types/node": "^13.9.8",
-    "@types/react": "^16.9.31",
-    "@types/react-dom": "^16.9.6",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "0.0.6",
-    "parcel-plugin-compress": "^1.1.0",
-    "prettier": "^2.0.2",
-    "typescript": "^3.8.3"
+    "start": "npx webpack-dev-server --config webpack/dev.config.js",
+    "build": "npx webpack --config webpack/prod.config.js",
+    "lint": "eslint . --fix --ext .ts,.tsx,.js,.jsx"
   },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^4.0.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10",
+    "prettier": "^2.0.5",
+    "terser-webpack-plugin": "^3.0.4",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   }
 }

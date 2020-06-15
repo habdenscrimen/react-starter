@@ -1,0 +1,35 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/typescript",
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [2, {
+      "extensions": [".tsx"] // allow components placement only in .tsx files
+    }],
+    "react/jsx-props-no-spreading": 0,
+
+    "import/extensions": [2, {".tsx": "never"}], // fix importing .tsx files
+    "import/no-extraneous-dependencies": [2, {
+      "devDependencies": ["**/*.js"] // allow to import dev dependencies in .js files (used in webpack config)
+    }],
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+
+    "@typescript-eslint/no-var-requires": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
