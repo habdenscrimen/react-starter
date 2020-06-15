@@ -1,3 +1,8 @@
-## How to use
+# React starter
 
-`git clone https://github.com/habdenscrimen/react-starter.git && rm -rf react-starter/{.git,readme.md}`
+*Note: there is also Webpack version (see [webpack-eslint](https://github.com/habdenscrimen/react-starter/tree/webpack-eslint) branch)*
+
+## What this starter contains
+1. Parcel
+1. Typescript
+1. Prettier
